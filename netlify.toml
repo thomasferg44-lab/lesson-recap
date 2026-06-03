@@ -1,26 +1,23 @@
 [build]
-command = "npm run build"
-publish = "dist"
-
-[functions]
-directory = "netlify/functions"
+  command = "npm run build"
+  publish = "dist"
 
 [[redirects]]
-from = "/api/get-sessions"
-to = "/.netlify/functions/get-sessions"
-status = 200
+  from = "/api/process-recap"
+  to = "/.netlify/functions/process-recap"
+  status = 200
 
 [[redirects]]
-from = "/api/weekly-summary"
-to = "/.netlify/functions/weekly-summary"
-status = 200
+  from = "/api/get-sessions"
+  to = "/.netlify/functions/get-sessions"
+  status = 200
 
 [[redirects]]
-from = "/api/*"
-to = "/.netlify/functions/:splat"
-status = 200
+  from = "/api/weekly-summary"
+  to = "/.netlify/functions/weekly-summary"
+  status = 200
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
