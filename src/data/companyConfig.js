@@ -1,0 +1,45 @@
+export default {
+  deploymentId: "cayman-aqualife-academy",
+  company: {
+    name: "Cayman Aqualife Academy",
+    tagline: "Water Polo · Swimming · Jnr Life-Guarding",
+    registrationNumber: "109411",
+    address: ["George Town", "Grand Cayman", "Cayman Islands"],
+    phone: "+345 326 3370",
+    email: "coachgrantcayman@gmail.com",
+    website: "caymanaqualifeacademy.com",
+  },
+  branding: {
+    primaryColor: "#21B7B5",
+    accentColor: "#E7A034",
+    textColor: "#1A1A1A",
+    logoPath: "/logo.png",
+  },
+  coaches: [
+    "Coach Grant",
+    "Coach Thomas",
+  ],
+  lessonTypes: [
+    "Private Lesson",
+    "Group Class",
+    "Water Polo",
+    "Splash Ball",
+    "Camp",
+  ],
+  categories: [
+    { id: "freestyle", label: "Freestyle" },
+    { id: "backstroke", label: "Backstroke" },
+    { id: "breaststroke", label: "Breaststroke" },
+    { id: "butterfly", label: "Butterfly" },
+    { id: "starts_turns", label: "Starts & Turns" },
+    { id: "water_polo", label: "Water Polo Skills" },
+    { id: "general", label: "General Notes" },
+  ],
+  recapSettings: {
+    footerMessage: "Thank you for being part of the Aqualife family!",
+    showDate: true,
+    showDuration: true,
+    showCoach: true,
+    coachEmail: "coachgrantcayman@gmail.com",
+  },
+}

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install*)",
+      "Bash(npm run*)",
+      "Bash(npm create*)",
+      "Bash(npx*)",
+      "Bash(node*)",
+      "Bash(cat*)",
+      "Bash(ls*)",
+      "Bash(mkdir*)",
+      "Bash(cp*)",
+      "Bash(mv*)",
+      "Bash(touch*)",
+      "Bash(echo*)",
+      "Bash(rm -rf node_modules*)",
+      "Bash(git init*)",
+      "Bash(git add*)",
+      "Bash(git commit*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(sudo*)"
+    ]
+  },
+  "autoApprove": true
+}
