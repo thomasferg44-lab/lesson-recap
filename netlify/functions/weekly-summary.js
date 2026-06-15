@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-const supabase  = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY)
+const supabase  = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
 const resend    = new Resend(process.env.RESEND_API_KEY)
 
 // ─── Rate limiter — 5 requests per IP per hour (weekly summary is expensive)
@@ -77,7 +77,7 @@ export const handler = async (event) => {
   if (
     !process.env.ANTHROPIC_API_KEY ||
     !process.env.SUPABASE_URL       ||
-    !process.env.SUPABASE_SERVICE_KEY ||
+    !process.env.SUPABASE_SERVICE_ROLE_KEY ||
     !process.env.RESEND_API_KEY
   ) {
     console.error('weekly-summary: missing environment variables')

@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 // ─── Supabase client — keys come from process.env only, never from code
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.SUPABASE_SERVICE_ROLE_KEY
 )
 
 // ─── Rate limiter (in-memory; same pattern as process-recap.js)
@@ -49,7 +49,7 @@ export const handler = async (event) => {
   }
 
   // Supabase env check
-  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     console.error('get-sessions: Supabase environment variables are not configured')
     return json(500, { error: 'Server configuration error' })
   }
